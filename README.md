@@ -1,3 +1,26 @@
+### 一个基于react实现的温度转换器小demo
+
+
+
+
+
+####演示react的受控组件及状态提升
+
+
+
+- 1.用户在TemperatureInput组件（受控组件）中输入了数值
+
+- 2.在input的 onChange函数中，监听到了数值变化，把当前输入的内容传递给Calculator父组件，e.target.value为当前输入的数值
+
+- 3.Calculator父组件通过this.setState设置并更新到唯一的state中，状态提升完毕
+
+- 4.因为this.setState被执行，故而render被重新触发， 根据scale，转成不同的温度显示
+
+- 5.父组件通过 temperature={fahrenheit}属性设置给子组件，完成同步的状态显示
+
+  ​
+
+```rea
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -100,3 +123,6 @@ ReactDOM.render(
     <Calculator/>,
     document.getElementById('root')
 )
+
+```
+
